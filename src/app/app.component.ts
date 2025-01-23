@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {COURSES} from '../db-data';
+import { COURSES } from '../db-data';
+import { Course } from './model/course';
 
 @Component({
     selector: 'app-root',
@@ -9,6 +10,10 @@ import {COURSES} from '../db-data';
 })
 export class AppComponent {
 
+    courses = COURSES;
 
+    recievedData(course: Course) {
+        console.log('Recieved Data', course);
+    }
 
 }
